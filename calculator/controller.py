@@ -7,11 +7,11 @@ class Controller:
     # 생략이 가능하다.
     def calc(self, num1, num2, opcode):
         model = Model()
-        #set 문법
+        # set 문법
         model.num1 = num1
         model.num2 = num2
         model.opcode = opcode
-        service = Service()
+        service = Service(model)
         if opcode == '+': result = service.add()
         if opcode == '-': result = service.minus()
         if opcode == '*': result = service.multi()
