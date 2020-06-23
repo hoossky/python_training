@@ -1,6 +1,7 @@
 class Model:
     def __init__(self):
-        # _ 은 private의 의미
+        # _ 은 protected의 의미
+        # __ 은 private의 의미
         self._num1 = 0
         self._num2 = 0
         self._opcode = ''
@@ -22,3 +23,4 @@ class Model:
 
     @opcode.setter
     def opcode(self, opcode): self._opcode = opcode
+
