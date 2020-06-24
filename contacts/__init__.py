@@ -17,15 +17,15 @@ if __name__ == '__main__':
                          input('전화번호\n'),
                          input('이메일\n'),
                          input('주소\n'))
-
         if menu == '2':
-            app.search(input('이름\n'))
-
+            print(app.search(input('이름\n')))
         if menu == '3':
-            app.list()
-
+            print(app.list())
+            List = app.list()
+            temp = ''
+            for i in List:
+                temp.join(i)
         if menu == '4':
             app.remove(input('이름\n'))
-
         if menu == '0':
             break

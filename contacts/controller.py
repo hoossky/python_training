@@ -14,13 +14,13 @@ class Controller:
         model.email = email
         model.addr = addr
         self._service.add_contact(model)
-        print('등록완료')
+        print('등록 완료')
 
-    def search(self, payload):
-        model = Model()
+    def search(self, name) -> object:
+        self._service.get_contact(name)
 
     def list(self):
-        pass
+        return self._service.get_contacts()
 
-    def remove(self):
-        pass
+    def remove(self, name):
+        self._service.del_contact(name)

@@ -7,14 +7,18 @@ class Service:
         self._contacts.append(payload)
         print(self._contacts)
 
-    def get_contact(self, payload):  # name
-        #for i in payload:
-         #   if i
-          #      break
-        pass
+    def get_contact(self, payload) -> object:  # name
+        for i in self._contacts:
+            if payload == i.name:
+                return i
 
-    def get_contacts(self):
-        pass
+    def get_contacts(self) -> []:
+        contacts = []
+        for i in self._contacts:
+            contacts.append()
+        return ' '.join(contacts)
 
     def del_contact(self, payload):  # name
-        pass
+        for i, t in enumerate(self._contacts):
+            if payload == t.name:
+                del self._contacts[i]
